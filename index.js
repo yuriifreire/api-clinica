@@ -1,14 +1,22 @@
 const express = require('express');
 const cors = require('cors');
+<<<<<<< HEAD
 const con = require('./conectDb');
+=======
+const con = require('./db');
+>>>>>>> master
 const bodyParser = require('body-parser');
 
 const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }))
+<<<<<<< HEAD
 app.use(cors())
 
+=======
+app.use(cors());
+>>>>>>> master
 
 app.listen(4000, () => {
     con.connect('mongodb://localhost/clinica', (erro, res) => {
